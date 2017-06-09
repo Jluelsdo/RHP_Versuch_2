@@ -22,6 +22,7 @@ void emain(void* arg)
 {
 	// Hier alle benoetigten Variablen deklarieren
 	// ...
+BYTE DigitalValue ;
 
 
 	INIT_BM_WITH_REGISTER_UI; // Hier unbedingt einen Break-Point setzen !!!
@@ -30,9 +31,16 @@ void emain(void* arg)
 	// Hier die Treiberfunktionen aufrufen und testen (Aufgabe 1)
 	// ...
 
+//TEST 1
 
+    printf(Init(GlobalBoardHandle,0x9B));
+    printf("\n");
 
-
+    printf(InputByte(GlobalBoardHandle,3,DigitalValue)); //PORT D  auslesen
+    printf("\n");
+    printf("Wert in DigitalValue: ");
+    printf(DigitalValue);
+    printf("\n");
 
 	// Ab hier beginnt die Endlosschleife fuer den Automaten (Aufgabe 2)
 
